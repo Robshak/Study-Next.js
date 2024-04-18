@@ -1,0 +1,22 @@
+:root {
+  --black-color: #3B434E;
+  --white-color: #FFFFFF;
+  --primary-color: #7653FC;
+  --red-color: #FC836D;
+  --green-color: #1DC37E;
+  --green-light-color: #C8F8E4;
+  --background-color: #F5F6F8;
+  --font: "Roboto", sans-serif;
+}
+
+* {
+  font-family: var(--font);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--black-color);
+  background-color: var(--background-color);
+}

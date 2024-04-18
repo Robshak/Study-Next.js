@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "react/prop-types": [
+      0
+    ],
+    // "indent": ["error", "tab"],
+    "for-direction": [
+      "error"
+    ],
+    "semi": "off",
+    "@typescript-eslint/semi": [
+      "warn"
+    ],
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": true
+      }
+    ]
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ]
+}
