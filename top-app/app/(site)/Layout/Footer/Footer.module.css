@@ -1,0 +1,25 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 10px 40px;
+    padding: 25px 32px;
+    background-color: var(--primary-color);
+}
+
+.wrapper * {
+    color: var(--white-color);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.wrapper a:hover {
+    color: var(--gray-light);
+    text-decoration: underline;
+}
+
+@media (max-width: 950px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}

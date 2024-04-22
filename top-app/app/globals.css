@@ -1,5 +1,6 @@
 :root {
   --black-color: #3B434E;
+  --gray-light: #EBEBEB;
   --white-color: #FFFFFF;
   --primary-color: #7653FC;
   --red-color: #FC836D;
@@ -19,4 +20,8 @@
 body {
   color: var(--black-color);
   background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
 }
