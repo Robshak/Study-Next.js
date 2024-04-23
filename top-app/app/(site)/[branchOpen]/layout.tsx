@@ -10,14 +10,18 @@ export const metadata: Metadata = {
 };
 
 export default function SiteLayout({
-    children
+    children,
+    params
 }: Readonly<{
     children: React.ReactNode;
+    params: {
+        branchOpen: string
+    }
 }>) {
     return (
         <div className={styles["wrapper"]}>
             <Header className={styles["header"]} />
-            <Sidebar className={styles["sidebar"]} />
+            <Sidebar branchOpen={params.branchOpen} className={styles["sidebar"]} />
             <div className={styles["body"]}>
                 {children}
             </div>

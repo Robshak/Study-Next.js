@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { getPage } from "@/api/page";
 import { notFound } from "next/navigation";
 import { getMenu } from "@/api/menu";
-import { Menu } from "../../Components/menu/menu";
 
 export const metadata: Metadata = {
     title: "just page"
@@ -22,7 +21,6 @@ export default async function PageProducts({ params }: { params: { alias: string
     return (
         <div>
             {page.title}
-            <Menu></Menu>
         </div>
     );
 }

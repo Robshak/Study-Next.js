@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Footer.module.css";
 import { FooterProps } from "./Footer.props";
 import cn from "classnames";
@@ -7,8 +8,8 @@ export default function Footer({ className, ...props }: FooterProps): JSX.Elemen
     return (
         <footer {...props} className={cn(styles["wrapper"], className)}>
             <div>OwlTop © 2020 - {format(new Date(), "yyyy")} Все права защищены</div>
-            <a href="#" target="_blank">Пользовательское соглашение</a>
-            <a href="#" target="_blank">Политика конфиденциальности</a>
+            <Link href="#" target="_blank">Пользовательское соглашение</Link>
+            <Link href="#" target="_blank">Политика конфиденциальности</Link>
         </footer>
     );
 }
