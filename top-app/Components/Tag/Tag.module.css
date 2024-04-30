@@ -17,6 +17,7 @@
 }
 
 .ghost {
+    color: var(--black-color);
     border: 1px solid var(--gray-light);
     background: none;
 }
@@ -26,15 +27,17 @@
 }
 
 .red {
+    color: var(--white-color);
     background-color: #DE0000;
     font-weight: bold;
 }
 
 .red * {
-    color: var(--red-color);
+    color: var(--white-color);
 }
 
 .grey {
+    color: var(--white-color);
     background-color: #B3C0D9;
     font-weight: bold;
 }
@@ -44,6 +47,7 @@
 }
 
 .green {
+    color: var(--green-color);
     background-color: var(--green-light-color);
     font-weight: bold;
 }
@@ -53,6 +57,7 @@
 }
 
 .primary {
+    color: var(--primary-color);
     background: none;
     border: 1px solid var(--primary-color);
     font-weight: bold;

@@ -1,0 +1,26 @@
+.search {
+    position: relative;
+
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+}
+
+.button {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 4px;
+    right: 5px;
+
+    padding: 7px !important;
+}
+
+.button svg {
+    width: 15px;
+    height: 15px;
+}

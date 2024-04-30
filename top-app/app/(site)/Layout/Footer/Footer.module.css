@@ -17,6 +17,10 @@
     text-decoration: underline;
 }
 
+.rights-reserved {
+    text-wrap: nowrap;
+}
+
 @media (max-width: 950px) {
     .wrapper {
         grid-template-columns: 1fr;

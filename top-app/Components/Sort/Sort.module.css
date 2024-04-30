@@ -1,0 +1,46 @@
+.icon {
+    display: none;
+}
+
+.active {
+    color: var(--primary-color);
+
+    font-weight: bold;
+}
+
+.active .icon {
+    display: block;
+
+    margin-right: 8px;
+}
+
+.sort {
+    display: inline-block;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+}
+
+.sortName {
+    display: none;
+}
+
+.sort .category {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 20px 1fr;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    border: none;
+    background: none;
+
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.sort .category:not(.active) {
+    grid-template-columns: 1fr;
+}

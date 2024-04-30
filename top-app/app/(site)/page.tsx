@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./page.module.css";
-import { Button, Htag, Ptag, Rating, Tag } from "@/Components";
+import { Button, Htag, Input, Ptag, Rating, Tag, Textarea } from "@/Components";
 
 export default function Home(): JSX.Element {
   const [rating, setRating] = useState<number>(4);
@@ -25,6 +25,8 @@ export default function Home(): JSX.Element {
         Скажу вам как прошедший это – реально помогло в трудоустройстве!</Ptag>
       <Tag color={"green"} href="#">green</Tag>
       <Rating isEditable rating={rating} setRating={setRating}></Rating>
+      <Input placeholder="Test"></Input>
+      <Textarea placeholder="Test"></Textarea>
     </main>
   );
 }

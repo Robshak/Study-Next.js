@@ -1,0 +1,16 @@
+.up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    transition: 0.2s all;
+}
+
+.up:hover {
+    scale: 1.1;
+}
+
+.up:active {
+    transition: 0.1s all;
+    scale: 1;
+}
