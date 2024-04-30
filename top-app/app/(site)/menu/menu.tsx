@@ -8,7 +8,7 @@ import styles from "./menu.module.css";
 import cn from "classnames";
 import { FirstLevelMenuItem, PageItem } from "@/interfaces/menu.interface";
 import { TopLevelCategory } from "@/interfaces/page.interface";
-import { useContext } from "react";
+import { KeyboardEvent, useContext } from "react";
 import { AppContext } from "../Context/app.context";
 import { motion } from "framer-motion";
 
@@ -55,6 +55,13 @@ export default function Menu({ menuList }: MenuProps): JSX.Element {
         }));
     };
 
+    const openMenuKey = (key: KeyboardEvent, secondCategory: string) => {
+        key.preventDefault();
+        if (key.code == "Space" || key.code == "Enter") {
+            openMenu(secondCategory);
+        }
+    };
+
     const buildFirstLevel = () => {
         return (
             <>
@@ -85,6 +92,8 @@ export default function Menu({ menuList }: MenuProps): JSX.Element {
                     return (
                         <div key={m._id.secondCategory}>
                             <div
+                                tabIndex={0}
+                                onKeyDown={(key: KeyboardEvent) => openMenuKey(key, m._id.secondCategory)}
                                 className={styles["second-level"]}
                                 onClick={() => openMenu(m._id.secondCategory)}
                             >{m._id.secondCategory}</div>
@@ -97,7 +106,7 @@ export default function Menu({ menuList }: MenuProps): JSX.Element {
                                 initial={m.isOpened ? "visible" : "hidden"}
                                 animate={m.isOpened ? "visible" : "hidden"}
                             >
-                                {buildThirdLevel(m.pages, localMenu.route)}
+                                {buildThirdLevel(m.pages, localMenu.route, m.isOpened ?? false)}
                             </motion.div>
                         </div>
                     );
@@ -106,7 +115,7 @@ export default function Menu({ menuList }: MenuProps): JSX.Element {
         );
     };
 
-    const buildThirdLevel = (pages: PageItem[], route: string) => {
+    const buildThirdLevel = (pages: PageItem[], route: string, isOpened: boolean) => {
         return (
             pages.map(p => (
                 <motion.div
@@ -114,6 +123,7 @@ export default function Menu({ menuList }: MenuProps): JSX.Element {
                     variants={variantsChildren}
                 >
                     <Link
+                        tabIndex={isOpened ? 0 : -1}
                         href={`/${route}/${p.alias}`} className={cn(styles["third-level"], {
                             [styles["third-level-active"]]: `/${route}/${p.alias}` == pathName
                         })}>

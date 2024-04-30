@@ -1,14 +1,17 @@
-import { Metadata } from "next";
 import { getPage } from "@/api/page";
 import { notFound } from "next/navigation";
 import { getMenu } from "@/api/menu";
 import { getProducts } from "@/api/products";
 import { firstLevelMenu } from "@/helpers/helpers";
 import { TopPageComponent } from "../../Page-components";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
-    title: "content"
-};
+export async function generateMetadata({ params }: { params: { alias: string, type: string } }): Promise<Metadata> {
+    const page = await getPage(params.alias);
+    return {
+        title: page?.metaTitle
+    };
+}
 
 export async function generateStaticParams() {
     const menu = await getMenu(0);

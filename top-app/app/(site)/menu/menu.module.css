@@ -61,19 +61,18 @@
     font-size: 12px;
     line-height: 19px;
     font-weight: 500;
-    color: #515357;
+    color: #000;
     padding-left: 10px;
+    outline-offset: -1px;
 }
 
 .third-level:hover {
     color: var(--primary-color);
-    margin-left: -2px;
     border-left: 2px solid var(--primary-color);
 }
 
 .third-level-active {
     color: var(--primary-color);
-    margin-left: -2px;
     border-left: 2px solid var(--primary-color);
     font-weight: 600;
 }

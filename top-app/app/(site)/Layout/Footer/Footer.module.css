@@ -21,7 +21,7 @@
     text-wrap: nowrap;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
     .wrapper {
         grid-template-columns: 1fr;
         justify-items: center;

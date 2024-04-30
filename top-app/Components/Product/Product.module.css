@@ -181,7 +181,7 @@
     border: none !important;
 }
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1450px) {
     .product {
         grid-template-columns: 70px 30px auto 40px auto 40px 1fr;
         grid-template-areas:

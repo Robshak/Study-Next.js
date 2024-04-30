@@ -11,7 +11,7 @@ import { sortReducer } from "./sort.reducer";
 // import { useScrollY } from "@/hooks/useScrollY.hook";
 
 export const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps): JSX.Element => {
-    const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(sortReducer, { products, sort: SortEnum.Rating });
+    const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(sortReducer, { products, sort: SortEnum.Price });
     // const scrollY = useScrollY();
 
     const setSort = (sort: SortEnum) => {
